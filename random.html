@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>엄마를 위한 랜덤 음식 생성기</title>
+    <link rel="stylesheet" href="printer.js">
+</head>
+<body>
+    <button class= "random_create" onclick="random_printer()">click me!</button>
+    <div class = "output_div"></div>
+</body>
+<script>
+    let foodArr = ["제육볶음","낙지볶음","소세지야채볶음","돼지갈비","김치찌개","두부부침","두부김치","김치전","잡채","감자볶음","닭볶음탕","김치갈비찜","청국장비빔밥","김치제육볶음","소고기무국", "시금치된장국","감자조림","고등어구이","김치볶음","계란말이","햄볶음","까르보나라스파케티","토마토스파게티","참치오이비빔밥","오이냉국","잔치국수", "골뱅이무침", "콩나물볶음", "떡볶이", "군만두","갈비찜", "계란말이","비빔국수","무조림","된장국","감자국","하이스카레","카레","콩나물잡채","가지무침","짜파게티","라면","오리훈제","샤브샤브","두부조림","참지천","팽이버섯부침"];
+    function random_printer() {
+var random_number = Math.round(Math.random()*47);
+var food_body = document.querySelector('.output_div');
+food_body.innerHTML = (`오늘은 ${foodArr[random_number]} 해주세요!`)
+}
+
+</script>
+<style>
+    .output_div {
+        width: 400px;
+        height: 400px;
+        border: 1px solid black;
+    }
+</style>
+</html>
